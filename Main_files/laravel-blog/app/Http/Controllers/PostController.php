@@ -157,13 +157,8 @@ class PostController extends Controller
         PostView::create([
             'ip_address' => $request->ip(),
             'user_agent' => $request->userAgent(),
-<<<<<<< HEAD
             'post_id' => $post->id,
             'user_id' => $user?->id,
-=======
-            'post_id'    => $post->id,
-            'user_id'    => $user?->id,
->>>>>>> dev
         ]);
 
         return view('post.view', ['post' => $post, 'prev' => $prev, 'next' => $next]);
