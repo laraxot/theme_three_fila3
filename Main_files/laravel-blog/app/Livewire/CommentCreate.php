@@ -19,9 +19,9 @@ class CommentCreate extends Component
 
     public function mount(Post $post, $commentModel = null, $parentComment = null)
     {
-        $this->post         = $post;
+        $this->post = $post;
         $this->commentModel = $commentModel;
-        $this->comment      = $commentModel ? $commentModel->comment : '';
+        $this->comment = $commentModel ? $commentModel->comment : '';
 
         $this->parentComment = $parentComment;
     }
@@ -52,9 +52,9 @@ class CommentCreate extends Component
             $this->comment = '';
         } else {
             $comment = Comment::create([
-                'comment'   => $this->comment,
-                'post_id'   => $this->post->id,
-                'user_id'   => $user->id,
+                'comment' => $this->comment,
+                'post_id' => $this->post->id,
+                'user_id' => $user->id,
                 'parent_id' => $this->parentComment?->id,
             ]);
 

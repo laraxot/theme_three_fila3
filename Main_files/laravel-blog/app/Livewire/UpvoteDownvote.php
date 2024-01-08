@@ -58,8 +58,8 @@ class UpvoteDownvote extends Component
         if (! $model) {
             \App\Models\UpvoteDownvote::create([
                 'is_upvote' => $upvote,
-                'post_id'   => $this->post->id,
-                'user_id'   => $user->id,
+                'post_id' => $this->post->id,
+                'user_id' => $user->id,
             ]);
 
             return;

@@ -67,10 +67,10 @@ class TextWidgetResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index'  => Pages\ListTextWidgets::route('/'),
+            'index' => Pages\ListTextWidgets::route('/'),
             'create' => Pages\CreateTextWidget::route('/create'),
-            'view'   => Pages\ViewTextWidget::route('/{record}'),
-            'edit'   => Pages\EditTextWidget::route('/{record}/edit'),
+            'view' => Pages\ViewTextWidget::route('/{record}'),
+            'edit' => Pages\EditTextWidget::route('/{record}/edit'),
         ];
     }
 }

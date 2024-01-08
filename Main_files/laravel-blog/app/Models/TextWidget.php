@@ -55,7 +55,7 @@ class TextWidget extends EloquentModel
 
     public static function getContent(string $key): string
     {
-        $widget = Cache::get('text-widget-' . $key, fn () => TextWidget::query()->where('key', $key)->first());
+        $widget = Cache::get('text-widget-'.$key, fn () => TextWidget::query()->where('key', $key)->first());
 
         if (! $widget) {
             return '';

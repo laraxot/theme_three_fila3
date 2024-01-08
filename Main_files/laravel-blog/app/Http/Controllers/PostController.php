@@ -100,7 +100,6 @@ class PostController extends Controller
                 ->get();
         }
 
-
         // Show recent categories with their latest posts
         $categories = Category::query()
 //            ->with(['posts' => function ($query) {
@@ -126,7 +125,6 @@ class PostController extends Controller
             ->limit(5)
             ->get();
 
-
         return view('home', ['latestPost' => $latestPost, 'popularPosts' => $popularPosts, 'recommendedPosts' => $recommendedPosts, 'categories' => $categories]);
     }
 
@@ -136,7 +134,7 @@ class PostController extends Controller
     public function show(Post $post, Request $request)
     {
         if (! $post->active || $post->published_at > Carbon::now()) {
-            throw new NotFoundHttpException();
+            throw new NotFoundHttpException;
         }
 
         $next = Post::query()
@@ -159,8 +157,8 @@ class PostController extends Controller
         PostView::create([
             'ip_address' => $request->ip(),
             'user_agent' => $request->userAgent(),
-            'post_id'    => $post->id,
-            'user_id'    => $user?->id,
+            'post_id' => $post->id,
+            'user_id' => $user?->id,
         ]);
 
         return view('post.view', ['post' => $post, 'prev' => $prev, 'next' => $next]);
