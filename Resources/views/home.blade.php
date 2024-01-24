@@ -6,15 +6,17 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <!-- Latest Post -->
-            <div class="col-span-2">
-                <h2 class="text-lg sm:text-xl font-bold text-blue-500 uppercase pb-1 border-b-2 border-blue-500 mb-3">
-                    Latest Post
-                </h2>
-                @if ($_theme->latestPost())
-                    <x-article.card :article="$_theme->latestPost()"/>
-                @endif
-            </div>
+            @if($_theme->getLatestArticles()->isNotEmpty())
 
+                <div class="col-span-2">
+                    <h2 class="text-lg sm:text-xl font-bold text-blue-500 uppercase pb-1 border-b-2 border-blue-500 mb-3">
+                        Latest Post
+                    </h2>
+                    @foreach ($_theme->getLatestArticles() as $article)
+                        <x-article.card :article="$article" tpl='v1'/>
+                    @endforeach
+                </div>
+            @endif
             <!-- Popular 3 post -->
             <div>
                 <h2 class="text-lg sm:text-xl font-bold text-blue-500 uppercase pb-1 border-b-2 border-blue-500 mb-3">

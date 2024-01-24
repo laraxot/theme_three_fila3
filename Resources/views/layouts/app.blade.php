@@ -17,7 +17,7 @@
     @livewireStyles
     <!-- Scripts -->
     <link href="{{ $_theme->asset('pub_theme::dist/assets/app.css') }}" rel="stylesheet" />
-    <script src="{{ $_theme->asset('pub_theme::dist/assets/app2.js') }}" />
+    <script src="{{ $_theme->asset('pub_theme::dist/assets/app2.js') }}" ></script>
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 </head>
 <body class="bg-gray-50 font-family-karla">
