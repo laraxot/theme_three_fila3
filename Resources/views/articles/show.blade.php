@@ -65,8 +65,8 @@
 
             {{-- <livewire:comments :post="$article"/> --}}
         </section>
-
-        {{-- <x-sidebar/> --}}
+        {{ dddx($_theme->categories()) }}
+        <x-sidebar :collection="$_theme->categories()"/>
     </div>
 </div>
 {{-- </x-app-layout> --}}
