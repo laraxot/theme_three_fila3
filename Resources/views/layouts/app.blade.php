@@ -20,8 +20,15 @@
     <script src="{{ $_theme->asset('pub_theme::dist/assets/app2.js') }}" ></script> --}}
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     {{-- @vite('resources/css/app.css') --}}
-    @vite(['Resources/js/app.js'], 'themes/Five/dist')
-    @vite(['Resources/css/filament/admin/theme.css', 'Resources/css/app.css'], 'themes/Five/dist')
+
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+
+    @filamentStyles
+    @vite(['Resources/css/filament/admin/theme.css', 'Resources/css/app.css'], 'themes/Three/dist')
 </head>
 <body class="bg-gray-50 font-family-karla">
 
@@ -125,7 +132,10 @@
         <div class="uppercase py-6">&copy; myblog.com</div>
     </div>
 </footer>
-
+{{--
 @livewireScripts
+--}}
+@filamentScripts
+@vite(['Resources/js/app.js'], 'themes/Three/dist')
 </body>
 </html>
