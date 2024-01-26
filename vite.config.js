@@ -5,6 +5,7 @@ dotenvExpand(
 
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
+import path from 'path'
 
 export default defineConfig({
 	build: {
@@ -23,12 +24,12 @@ export default defineConfig({
 	plugins: [
 		laravel({
 			// publicDirectory: '../../../public_html/',
-			buildDirectory: 'themes/Three',
+			buildDirectory: 'zibibbo',
 			// buildDirectory: 'Three',
 			input: [
 				//__dirname + '/Resources/sass/app.scss',
 				//__dirname + '/Resources/scss/app-mix.scss',
-                __dirname + '/Resources/css/app.css',
+                //__dirname + '/Resources/css/app.css',
 				__dirname + '/Resources/js/app.js',
 				//__dirname + '/Resources/css/filament/admin/theme.scss'
 			],
