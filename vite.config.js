@@ -1,11 +1,12 @@
-const dotenvExpand = require('dotenv-expand');
-dotenvExpand(
-	require('dotenv').config({ path: '../../.env' /*, debug: true*/ }),
-);
+//import dotenv from 'dotenv';
+//import dotenvExpand from 'dotenv-expand';
+//dotenvExpand.expand(
+//	dotenv.config({ path: '../../.env' /*, debug: true*/ }),
+//);
 
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import path from 'path'
+//import path from 'path'
 
 export default defineConfig({
 	build: {

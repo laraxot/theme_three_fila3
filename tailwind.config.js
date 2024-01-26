@@ -7,6 +7,15 @@ module.exports = {
         '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         '../../storage/framework/views/*.php',
         '../../resources/views/**/*.blade.php',
+        './app/**/*.php',
+        './resources/**/*.html',
+        './resources/**/*.js',
+        './resources/**/*.jsx',
+        './resources/**/*.ts',
+        './resources/**/*.tsx',
+        './resources/**/*.php',
+        './resources/**/*.vue',
+        './resources/**/*.twig',
     ],
 
     theme: {
@@ -17,5 +26,9 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms')],
+    plugins: [
+        require('@tailwindcss/ui'),
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+    ],
 };
