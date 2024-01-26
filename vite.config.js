@@ -7,19 +7,19 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
-	// build: {
+	build: {
 	// 	// outDir: '../../../public_html/build/ewall',
 	// 	outDir: './Resources/dist',
-	// 	emptyOutDir: false,
-	// 	manifest: true,
-	// 	rollupOptions: {
-	// 		output: {
-	// 			entryFileNames: `assets/[name].js`,
-	// 			chunkFileNames: `assets/[name].js`,
-	// 			assetFileNames: `assets/[name].[ext]`
-	// 		}
-	// 	}
-	// },
+	 	emptyOutDir: false,
+	 	manifest: true,
+	 	rollupOptions: {
+	 		output: {
+	 			entryFileNames: `assets/[name].js`,
+	 			chunkFileNames: `assets/[name].js`,
+	 			assetFileNames: `assets/[name].[ext]`
+	 		}
+	 	}
+	},
 	plugins: [
 		laravel({
 			// publicDirectory: '../../../public_html/',
