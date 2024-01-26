@@ -2,6 +2,7 @@
     "private": true,
     "scripts": {
         "dev": "vite",
+        "copy": "cp ./Resources/dist/* -r ../../../public_html/themes/Three/dist",
         "build": "vite build"
     },
     "devDependencies": {

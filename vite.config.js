@@ -24,15 +24,17 @@ export default defineConfig({
 	},
 	plugins: [
 		laravel({
-			// publicDirectory: '../../../public_html/',
-			buildDirectory: 'zibibbo',
+			// publicDirectory: '../../../public_html/Themes/Three',
+			// buildDirectory: 'build',
+			// buildDirectory: 'zibibbo',
 			// buildDirectory: 'Three',
 			input: [
 				//__dirname + '/Resources/sass/app.scss',
 				//__dirname + '/Resources/scss/app-mix.scss',
                 //__dirname + '/Resources/css/app.css',
+                __dirname + '/Resources/css/app.css',
 				__dirname + '/Resources/js/app.js',
-				//__dirname + '/Resources/css/filament/admin/theme.scss'
+				__dirname + '/Resources/css/filament/admin/theme.css'
 			],
 			refresh: true,
 		}),
