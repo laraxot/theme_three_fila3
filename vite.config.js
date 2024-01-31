@@ -11,7 +11,7 @@ import laravel from 'laravel-vite-plugin';
 export default defineConfig({
 	build: {
 	// 	// outDir: '../../../public_html/build/ewall',
-	// 	outDir: './Resources/dist',
+		outDir: './Resources/dist',
 	 	emptyOutDir: false,
 	 	manifest: true,
 	 	rollupOptions: {
@@ -22,8 +22,12 @@ export default defineConfig({
 	 		}
 	 	}
 	},
+	ssr:{
+        noExternal: ['chart.js/**']
+    },
 	plugins: [
 		laravel({
+			publicDirectory: '../../../public_html/',
 			// publicDirectory: '../../../public_html/Themes/Three',
 			// buildDirectory: 'build',
 			// buildDirectory: 'zibibbo',

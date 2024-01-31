@@ -4,8 +4,16 @@
     "isEntry": true,
     "src": "Resources/css/app.css"
   },
+  "Resources/css/filament/admin/theme.css": {
+    "file": "assets/theme.css",
+    "isEntry": true,
+    "src": "Resources/css/filament/admin/theme.css"
+  },
   "Resources/js/app.js": {
-    "file": "assets/app2.js",
+    "css": [
+      "assets/app.css"
+    ],
+    "file": "assets/app.js",
     "isEntry": true,
     "src": "Resources/js/app.js"
   }

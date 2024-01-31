@@ -135,6 +135,7 @@
 {{--
 @livewireScripts
 --}}
+@livewire('notifications')
 @filamentScripts
 @vite(['Resources/js/app.js'], 'themes/Three/dist')
 </body>
